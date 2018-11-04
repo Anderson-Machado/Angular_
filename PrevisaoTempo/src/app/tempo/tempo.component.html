@@ -1,5 +1,26 @@
-<p>
-  Clique abaixo para realizar testes!
-</p>
-<button (click)="getPrevisaoTempo()">Pesquisar</button>
 
+<!-- <button class="alert alert-sucess" role="alert" 
+[class]="flag==true ?'btn btn-danger':'btn btn-info'" >{{flag}}</button> -->
+<!-- <div class="fa fa-check text-green" [class]="flag==true ?'fa fa-check-circle text-green':'fa fa-times text-danger'"  >teste</div> -->
+
+
+
+<input [(ngModel)]="cidade" type="text" placeholder="Informa a cidade"> <br> <br>
+<button (click)="getPrevisaoTempo()">Pesquisar</button>
+<div class="container">
+<div class="row">
+
+<div class="card">
+  <img class="card-img-top" src={{previsao.query.results.channel.image.url}} alt="Card image cap">
+  <div  class="card-body">
+   
+    <h5 class="card-title">{{previsao.query.results.channel.location.city}} - {{previsao.query.results.channel.location.region}}</h5>
+    <p class="card-text">{{previsao.query.results.channel.item.condition.temp}}cº</p>
+    <p>{{previsao.query.results.channel.location.country}}</p>
+   
+    
+    <a href="#" class="alert"  (click)="getTeste()">Verificar</a>
+    
+</div>
+</div>
+</div>

@@ -65,7 +65,7 @@
         long:number;
         link:string;
         pubDate:string;
-        conition:condition;
+        condition:condition;
         description:string;
        }
        export class condition {

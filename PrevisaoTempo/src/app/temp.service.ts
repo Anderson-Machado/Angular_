@@ -11,7 +11,7 @@ export class TempService {
   }
   
   geTtPrvisao(cidade:string)
-  {    let Url:string = "https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='Niterói, ak')&format=json";
+  {    let Url:string = "https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='"+cidade+", ak')&format=json";
        let result = this.serv.get<query>(Url);      
       return result;
   }
